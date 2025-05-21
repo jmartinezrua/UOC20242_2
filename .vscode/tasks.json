@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "create-directories",
+            "type": "shell",
+            "command": "mkdir -p bin lib",
+            "problemMatcher": []
+        },
+        {
+            "label": "build-uocplay",
+            "type": "shell",
+            "command": "cd UOCPlay && gcc -c -I./include src/*.c && ar rcs libUOCPlay.a *.o && cp libUOCPlay.a ../lib/",
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["create-directories"]
+        },
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-gdwarf-2", "-O0", "-Wall",
+                "-I.", "-I./test/include", "-I./UOCPlay/include",
+                "src/main.c",
+                "test/src/test_pr3.c",
+                "test/src/test_pr2.c",
+                "test/src/test_suite.c",
+                "test/src/test_pr1.c",
+                "test/src/test.c",
+                "-L./lib", "-lUOCPlay",
+                "-o", "./bin/UOC20242d"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["build-uocplay"]
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-O2", "-Wall",
+                "-I.", "-I./test/include", "-I./UOCPlay/include", "-DNDEBUG",
+                "src/main.c",
+                "test/src/test_pr3.c",
+                "test/src/test_pr2.c",
+                "test/src/test_suite.c",
+                "test/src/test_pr1.c",
+                "test/src/test.c",
+                "-L./lib", "-lUOCPlay",
+                "-o", "./bin/UOC20242"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["build-uocplay"]
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "rm -f ./bin/UOC20242d ./bin/UOC20242 ./lib/libUOCPlay.a UOCPlay/*.o",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

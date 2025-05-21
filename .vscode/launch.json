@@ -1,0 +1,66 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug UOC20242",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/UOC20242d",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/bin",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build-debug",
+      "miDebuggerPath": "gdb"
+    },
+    {
+      "name": "Release UOC20242",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/UOC20242",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/bin",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build-release",
+      "miDebuggerPath": "gdb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/user/UOC20242/UOCPlay/include",
+      "program": "/home/user/UOC20242/UOCPlay/include/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

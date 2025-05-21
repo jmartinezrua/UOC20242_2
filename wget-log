@@ -1,0 +1,6 @@
+--2025-05-21 23:23:43--  https://ultra-eu-prod-sms.cloudfront.cdn.bbcollab.com/content/4256a3b8-7666-40d6-bf23-69d4cecbfce3/25/05/20/14/4256a3b8-7666-40d6-bf23-69d4cecbfce3_1_250520T142526743Z.mp4?Expires=1747876244
+Resolving ultra-eu-prod-sms.cloudfront.cdn.bbcollab.com (ultra-eu-prod-sms.cloudfront.cdn.bbcollab.com)... 18.154.22.68, 18.154.22.118, 18.154.22.9, ...
+Connecting to ultra-eu-prod-sms.cloudfront.cdn.bbcollab.com (ultra-eu-prod-sms.cloudfront.cdn.bbcollab.com)|18.154.22.68|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-05-21 23:23:43 ERROR 403: Forbidden.
+
