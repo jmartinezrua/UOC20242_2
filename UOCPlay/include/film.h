@@ -93,7 +93,7 @@ tApiError filmList_del(tFilmList* list, const char* name);
 // Return a pointer to the film
 tFilm* filmList_find(tFilmList list, const char* name);
 
-// Return a pointer to the longest film of the list
+// Return a pointer to the longest film of the list (if multiple, returns the last one)
 tFilm* filmList_longestFind(tFilmList list);
 
 // Return a pointer to the longest free film of the list

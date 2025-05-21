@@ -244,8 +244,10 @@ tFilm* filmList_longestFind(tFilmList list) {
             maxDuration = currentDuration;
             printf("[DEBUG: EX1_2/3] New longest film: %s, duration: %d:%d\n", 
                    longest->name, longest->duration.hour, longest->duration.minutes);
+        } else if (currentDuration == maxDuration) {
+            // If duration is equal, update to the last one found
+            longest = &(current->elem);
         }
-        
         current = current->next;
     }
     
